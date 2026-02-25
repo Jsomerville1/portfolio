@@ -43,7 +43,7 @@ export default function ProjectCard({
       {/* Content */}
       <div className="p-6 flex flex-col flex-1">
         {featured && (
-          <span className="font-mono text-xs text-gold tracking-widest mb-2 uppercase">
+          <span className="font-mono text-xs text-accent tracking-widest mb-2 uppercase">
             // Featured Project
           </span>
         )}

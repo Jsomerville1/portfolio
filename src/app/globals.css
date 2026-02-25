@@ -6,10 +6,10 @@
   --color-surface: #0a0f1a;
   --color-card: #111827;
   --color-elevated: #1e293b;
-  --color-accent: #ffe057;
-  --color-gold: #f59e0b;
+  --color-accent: #f9f182;
+  --color-gold: ##015dc6;
   --color-primary: #e2e8f0;
-  --color-secondary: #94a3b8;
+  --color-secondary: #e6f5f4;
   --color-muted: #64748b;
 
   /* Font stacks */
@@ -70,24 +70,24 @@ body {
 
 /* Selection */
 ::selection {
-  background: rgba(255, 224, 87, 0.3);
+  background: rgba(249, 241, 130, 0.233);
   color: #e2e8f0;
 }
 
 /* Glow helpers */
 .glow-blue {
-  box-shadow: 0 0 20px rgba(255, 224, 87, 0.35);
+  box-shadow: 0 0 20px rgba(134, 206, 203, 0.35);
 }
 .glow-blue:hover {
-  box-shadow: 0 0 30px rgba(255, 224, 87, 0.55);
+  box-shadow: 0 0 30px rgba(134, 206, 203, 0.55);
 }
 
 .glow-gold {
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 20px rgba(224, 203, 6, 0.562);
 }
 
 .text-glow {
-  text-shadow: 0 0 24px rgba(255, 224, 87, 0.6);
+  text-shadow: 0 0 24px rgba(210, 231, 24, 0.384);
 }
 
 /* Card hover lift + border glow */

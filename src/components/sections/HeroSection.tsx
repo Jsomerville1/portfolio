@@ -69,8 +69,8 @@ export default function HeroSection() {
             {/* Status badge */}
             <motion.div variants={fadeUp} className="flex items-center gap-2.5 mb-8">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-400" />
               </span>
               <span className="font-mono text-xs text-muted tracking-[0.25em] uppercase">
                 Available for hire
@@ -83,10 +83,10 @@ export default function HeroSection() {
               className="font-heading font-bold leading-[0.9] mb-7"
             >
               <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] text-primary">
-                Joseph
+                Joseph Somerville
               </span>
               <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] text-accent text-glow">
-                Somerville
+                
               </span>
             </motion.h1>
 
