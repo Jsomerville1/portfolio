@@ -35,10 +35,10 @@ export default function ParticleField() {
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        size: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.4 + 0.15,
+        vx: (Math.random() - 0.5) * 0.55, // 0.25 to 0.8
+        vy: (Math.random() - 0.5) * 0.35, // 0.15 to 0.5
+        size: Math.random() * 1.5 + 0.5, // 0.5 to 2
+        opacity: Math.random() * 0.45 + 0.05, // 0.05 to 0.5
       }));
     };
 
@@ -48,9 +48,11 @@ export default function ParticleField() {
       initParticles();
     };
 
+    // Main animation loop
     const draw = () => {
+      // Clear with a transparent fill to create motion trails
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+      // Draw particles
       particles.forEach((p) => {
         p.x += p.vx;
         p.y += p.vy;
@@ -58,7 +60,7 @@ export default function ParticleField() {
         if (p.x > canvas.width) p.x = 0;
         if (p.y < 0) p.y = canvas.height;
         if (p.y > canvas.height) p.y = 0;
-
+        
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255,224,87,${p.opacity})`;
@@ -66,7 +68,7 @@ export default function ParticleField() {
       });
 
       // Connecting lines
-      const maxDist = 130;
+      const maxDist = 330;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
