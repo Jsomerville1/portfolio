@@ -2,49 +2,56 @@ import { experience, education } from "@/data/experience";
 import { skillCategories } from "@/data/skills";
 import TechBadge from "@/components/ui/TechBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ScrollReveal from "@/components/effects/ScrollReveal";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function ResumeSection() {
   return (
     <section id="resume" className="py-28 px-6 bg-surface">
       <div className="max-w-4xl mx-auto">
-        <SectionHeading index="03" title="Resume" />
+        <ScrollReveal>
+          <SectionHeading index="03" title="Resume" />
+        </ScrollReveal>
 
         {/* Education */}
-        <div className="mt-14 mb-14">
-          <h3 className="font-mono text-accent text-xs tracking-widest uppercase mb-8">
-            Education
-          </h3>
-          {education.map((entry) => (
-            <div
-              key={entry.title}
-              className="border-l-2 border-elevated pl-6 relative"
-            >
-              <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-accent" />
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                <h4 className="font-heading font-bold text-primary">
-                  {entry.title}
-                </h4>
-                <span className="font-mono text-xs text-muted shrink-0">
-                  {entry.period}
-                </span>
+        <ScrollReveal delay={0.1}>
+          <div className="mt-14 mb-14">
+            <h3 className="font-mono text-accent text-xs tracking-widest uppercase mb-8">
+              Education
+            </h3>
+            {education.map((entry) => (
+              <div
+                key={entry.title}
+                className="border-l-2 border-elevated pl-6 relative"
+              >
+                <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-accent" />
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                  <h4 className="font-heading font-bold text-primary">
+                    {entry.title}
+                  </h4>
+                  <span className="font-mono text-xs text-muted shrink-0">
+                    {entry.period}
+                  </span>
+                </div>
+                <p className="text-accent text-sm mt-1">
+                  {entry.company} — {entry.location}
+                </p>
               </div>
-              <p className="text-accent text-sm mt-1">
-                {entry.company} — {entry.location}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
 
         {/* Experience */}
         <div className="mb-14">
-          <h3 className="font-mono text-accent text-xs tracking-widest uppercase mb-8">
-            Experience
-          </h3>
+          <ScrollReveal>
+            <h3 className="font-mono text-accent text-xs tracking-widest uppercase mb-8">
+              Experience
+            </h3>
+          </ScrollReveal>
           <div className="space-y-10">
-            {experience.map((entry) => (
+            {experience.map((entry, i) => (
+              <ScrollReveal key={entry.title} delay={i * 0.1}>
               <div
-                key={entry.title}
                 className="border-l-2 border-elevated pl-6 relative"
               >
                 <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-accent" />
@@ -76,11 +83,13 @@ export default function ResumeSection() {
                   </div>
                 )}
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         {/* Skills summary */}
+        <ScrollReveal delay={0.1}>
         <div className="mb-14">
           <h3 className="font-mono text-accent text-xs tracking-widest uppercase mb-8">
             Skills
@@ -100,8 +109,10 @@ export default function ResumeSection() {
             ))}
           </div>
         </div>
+        </ScrollReveal>
 
         {/* Download CTA */}
+        <ScrollReveal delay={0.15}>
         <div className="text-center pt-4">
           <a
             href={siteConfig.resumeUrl}
@@ -122,6 +133,7 @@ export default function ResumeSection() {
             </svg>
           </a>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );
