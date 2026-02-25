@@ -149,7 +149,7 @@ export default async function ProjectPage({
 
           <div>
             <h2 className="font-heading font-bold text-2xl text-primary mb-5 flex items-center gap-4">
-              <span className="font-mono text-gold text-sm bg-gold/10 px-2 py-1 rounded">
+              <span className="font-mono text-accent text-sm bg-accent/10 px-2 py-1 rounded">
                 04
               </span>
               Results
@@ -157,7 +157,7 @@ export default async function ProjectPage({
             <ul className="space-y-4">
               {project.results.map((result, i) => (
                 <li key={i} className="text-secondary flex gap-3 leading-relaxed">
-                  <span className="text-gold shrink-0 mt-1">★</span>
+                  <span className="text-accent shrink-0 mt-1">★</span>
                   {result}
                 </li>
               ))}
