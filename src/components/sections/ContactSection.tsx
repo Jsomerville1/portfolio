@@ -13,7 +13,7 @@ export default function ContactSection() {
         </h3>
 
         <p className="text-secondary text-lg mb-10 leading-relaxed">
-          Looking for a full stack, front end, or back end engineer. Open to
+          Looking for full stack, front end, or back end software engineer position. Open to
           in-office, hybrid, or remote within the US — willing to relocate.
         </p>
 
