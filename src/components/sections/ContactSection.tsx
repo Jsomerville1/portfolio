@@ -9,7 +9,7 @@ export default function ContactSection() {
 
         <h3 className="font-heading font-bold text-3xl text-primary mt-10 mb-5">
           Let&apos;s Build Something{" "}
-          <span className="text-accent">Mission-Critical</span>
+          <span className="text-accent text-glow">Great</span>
         </h3>
 
         <p className="text-secondary text-lg mb-10 leading-relaxed">
