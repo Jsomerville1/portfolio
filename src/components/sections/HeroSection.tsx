@@ -27,7 +27,7 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12">
         <p className="font-mono text-accent text-sm mb-5 tracking-widest">
-          // hello, world
+          // hello
         </p>
 
         <h1 className="font-heading font-bold text-5xl sm:text-6xl lg:text-8xl text-primary mb-4 leading-none">
