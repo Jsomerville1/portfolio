@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { siteConfig } from "@/data/siteConfig";
-import ParticleField from "@/components/effects/ParticleField";
 import TypewriterText from "@/components/ui/TypewriterText";
 
 const container = {
@@ -39,7 +38,7 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden bg-surface"
     >
-      <ParticleField />
+
 
       {/* Grid background */}
       <div
