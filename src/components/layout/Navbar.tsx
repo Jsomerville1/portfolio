@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -17,6 +18,8 @@ const sectionIds = ["about", "projects", "resume", "contact"];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const activeSection = useScrollSpy(sectionIds);
 
   useEffect(() => {
@@ -46,11 +49,12 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const id = link.href.replace("#", "");
-            const isActive = activeSection === id;
+            const isActive = isHome && activeSection === id;
+            const href = isHome ? link.href : `/${link.href}`;
             return (
               <a
                 key={link.href}
-                href={link.href}
+                href={href}
                 className={`font-mono text-sm transition-colors ${
                   isActive
                     ? "text-accent"
@@ -106,7 +110,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={isHome ? link.href : `/${link.href}`}
               className="block py-3 text-secondary hover:text-accent font-mono text-sm transition-colors border-b border-white/5 last:border-0"
               onClick={() => setMobileOpen(false)}
             >
