@@ -14,7 +14,7 @@
 
   /* Font stacks */
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-space-grotesk);
+  --font-heading: var(--font-rethink-sans);
   --font-mono: var(--font-jetbrains-mono);
 
   /* Custom animations */

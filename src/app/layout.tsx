@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, Rethink_Sans, JetBrains_Mono, Bungee_Hairline } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -10,9 +10,10 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+  
+const rethinkSans = Rethink_Sans({
+  weight: ["400"],
+  variable: "--font-rethink-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${rethinkSans.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-surface text-primary antialiased">
         <Navbar />
